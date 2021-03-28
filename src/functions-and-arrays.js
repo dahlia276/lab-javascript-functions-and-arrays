@@ -1,16 +1,65 @@
 // Iteration #1: Find the maximum
 
+function maxOfTwoNumbers(number1, number2) {  
+   if ( number1 > number2) {
+    return number1 
+    //console.log(number1)
+   }else if ( number1 < number2) {
+     return number2
+   } else {
+    return number1
+   }
+}
+
+ //console.log(maxOfTwoNumbers(9, 11))
+
+
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+
+function findLongestWord(arr) {
+  if(arr.length === 0) {
+    return null
+  }
+
+    let longestWord = '';
+     // arr[0].length
+    for (let i = 0; i<arr.length; i++) {
+      if(arr[i].length > longestWord.length) {
+        longestWord = arr[i]
+      }
+    }
+    return longestWord
+}
+
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function sumNumbers(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    // sum = sum + arr[i]
+  } 
+  return sum;
+} 
+
+console.log(sumNumbers);
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+function averageNumbers(arr) {
+  if(arr.length === 0) {
+    return null
+  }
+  let sumNum = sumNumbers(arr)
+  let average = sumNum / arr.length
+  return average
+}
+/*
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
@@ -29,9 +78,31 @@ const wordsUnique = [
   'bring'
 ];
 
+*/
+function uniquifyArray(arr) {
+  if(arr.length === 0) {
+    return null
+  }
+  let newArray = [];
+
+  for(let i = 0; i < arr.length; i++) {
+    if(newArray.indexOf(arr[i]) === -1) {
+      newArray.push(arr[i])
+    }
+  }
+  return newArray
+}
+
+
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+function doesWordExist([""],[""])
 
+
+
+
+
+/*
 // Iteration #7: Count repetition
 const wordsCount = [
   'machine',
@@ -48,7 +119,7 @@ const wordsCount = [
 ];
 
 // Iteration #8: Bonus
-
+*/
 const matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
   [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
